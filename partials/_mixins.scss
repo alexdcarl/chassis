@@ -1,0 +1,49 @@
+/*****MIXINS TO MAKE LIFE EASIER*****/
+
+/**
+ * Create vendor-prefixed CSS in one go, e.g.
+ *
+   `@include vendor(border-radius, 4px);`
+ *
+ */
+@mixin vendor($property, $value...){
+    -webkit-#{$property}:$value;
+       -moz-#{$property}:$value;
+        -ms-#{$property}:$value;
+         -o-#{$property}:$value;
+            #{$property}:$value;
+}
+
+/**
+ * Dump background-image styles
+ */
+@mixin dump-bg-image-styles($path) {
+  background-image: url($path);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+/**
+ * Used for styling input placeholders
+ */
+@mixin placeholder {
+  &::-webkit-input-placeholder {@content}
+  &:-moz-placeholder           {@content}
+  &::-moz-placeholder          {@content}
+  &:-ms-input-placeholder      {@content}
+}
+
+/**
+ * Used to generate font-size with line height.
+ * @param  {decimal} $size
+ */
+@mixin font-size($size) {
+  font-size: $size * $root-font-size;
+  font-size: $size * 1rem;
+  line-height: $size * $line-height-font-size-ratio * $root-font-size;
+  line-height: $size * $line-height-font-size-ratio * 1rem;
+}
+
+/****END OF MIXINS SECTION****/

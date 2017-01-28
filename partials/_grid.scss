@@ -1,0 +1,89 @@
+/*******GRID*******/
+
+/****OPTIONS TO CREATE LISTS****/
+$flex-direction-list: row row-reverse column column-reverse;
+$justify-content-list: flex-start flex-end center space-between space-around;
+$vertical-align-list: flex-start flex-end center baseline stretch;
+
+.container {
+  @include font-size(1.4);
+	margin: 0 auto;
+  min-height: 100vh; 
+  position: relative;
+  width: 100%;
+}
+
+.flex-box {
+  display: flex;
+}
+
+@each $direction in $flex-direction-list {
+  .flex-direction-#{$direction} {
+    flex-direction: $direction;
+  }
+}
+
+@each $alignment in $justify-content-list {
+  .horizontal-align-#{$alignment} {
+    justify-content: $alignment;
+  }
+}
+
+@each $alignment in $vertical-align-list {
+  .vertical-align-#{$alignment} {
+    align-items: $alignment;
+  }
+}
+
+.flex-single {
+  flex-wrap: nowrap;
+}
+
+.flex-multi {
+  flex-wrap: wrap;
+}
+
+[class*='col-'] {
+  padding: 0px $gutter-width;
+  width: 100%;
+
+  &:first-child {
+    padding-left: $gutter-fringe-width;
+  }
+
+  &:last-child {
+    padding-right: $gutter-fringe-width;
+  }
+}
+
+@media #{$bp-sm} {
+	@for $i from 1 through $grid-columns {
+    .col-sm-#{$i} {
+        width: 100% / $grid-columns * $i;
+    } 
+	}
+}
+
+@media #{$bp-md} {
+	@for $i from 1 through $grid-columns {
+    .col-md-#{$i} {
+        width: 100% / $grid-columns * $i;
+    }
+	}
+}
+
+@media #{$bp-l} {
+  @for $i from 1 through $grid-columns {
+    .col-l-#{$i} {
+        width: 100% / $grid-columns * $i;
+    }
+  }
+}
+
+@media #{$bp-xl} {
+  @for $i from 1 through $grid-columns {
+    .col-xl-#{$i} {
+        width: 100% / $grid-columns * $i;
+    }
+  }
+}

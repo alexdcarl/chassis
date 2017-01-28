@@ -1,0 +1,28 @@
+/*******VARIABLES FILE*******/
+
+$root-font-size: if( global-variable-exists(fluid-font-size), $fluid-font-size, 0.7320644vw );
+$line-height-font-size-ratio: if( global-variable-exists(line-height-font-size-ratio), $line-height-font-size-ratio, 1.4 );
+
+/******TYPOGRAPHY******/
+
+$sans-serif-default: 'Arial, Helvetica, sans-serif';
+$serif-default: '"Times New Roman", Times, serif';
+$monospace-default: '"Courier New", Courier, monospace';
+
+$primary-font-family: if( global-variable-exists(primary-font-family), $primary-font-family, $sans-serif-default );
+$heading-font-family: if( global-variable-exists(primary-font-family), $heading-font-family, $serif-default );
+
+/******BREAKPOINTS******/
+
+$bp-sm: 'only screen and (min-width: 768px)';
+$bp-md: 'only screen and (min-width: 992px)';
+$bp-l: 'only screen and (min-width: 1200px)';
+$bp-xl: 'only screen and (min-width: 1500px)';
+
+/******GRID******/
+
+$grid-columns : if( global-variable-exists(grid-columns), $grid-columns, 12 ); 
+$gutter-width: if( global-variable-exists(gutter-width), $gutter-width, 1.5rem );
+$gutter-fringe-width: if( global-variable-exists(gutter-fringe-width), $gutter-fringe-width, 2rem );
+
+/****END OF VARIABLES****/
