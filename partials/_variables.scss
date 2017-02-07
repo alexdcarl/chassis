@@ -1,7 +1,6 @@
 /*******VARIABLES FILE*******/
 
 $root-font-size: if( global-variable-exists(fluid-font-size), $fluid-font-size, 0.7320644vw );
-$line-height-font-size-ratio: if( global-variable-exists(line-height-font-size-ratio), $line-height-font-size-ratio, 1.4 );
 
 /******TYPOGRAPHY******/
 
@@ -10,13 +9,13 @@ $serif-default: '"Times New Roman", Times, serif';
 $monospace-default: '"Courier New", Courier, monospace';
 
 $primary-font-family: if( global-variable-exists(primary-font-family), $primary-font-family, $sans-serif-default );
-$heading-font-family: if( global-variable-exists(primary-font-family), $heading-font-family, $serif-default );
+$heading-font-family: if( global-variable-exists(heading-font-family), $heading-font-family, $sans-serif-default );
 
 /******BREAKPOINTS******/
 
 $bp-sm: 'only screen and (min-width: 768px)';
 $bp-md: 'only screen and (min-width: 992px)';
-$bp-l: 'only screen and (min-width: 1200px)';
+$bp-lg: 'only screen and (min-width: 1200px)';
 $bp-xl: 'only screen and (min-width: 1500px)';
 
 /******GRID******/

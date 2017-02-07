@@ -1,0 +1,147 @@
+/*******POSITIONING*******/
+/**
+ * Helper classes to position elements
+ */
+
+$position-list: absolute relative fixed;
+$display-list: block inline-block inline flex none;
+
+// Gives element size of full screen
+
+.element--full-screen {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+}
+
+.element--full-width {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+}
+
+.element--full-height {
+  top: 0px;
+  bottom: 0px;
+}
+
+// Brings element to top of the others
+.on-top--two {
+  z-index: 2;
+}
+
+.on-top--three {
+  z-index: 3;
+}
+
+
+//Set margins to zero
+
+.margin--zero {
+  margin: 0;
+}
+
+  .margin-right-left--zero {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+    .margin-left--zero {
+      margin-left: 0;
+    }
+
+    .margin-right--zero {
+      margin-right: 0;
+    }
+
+  .margin-top-bottom--zero {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+    .margin-top--zero {
+      margin-top: 0;
+    }
+
+    .margin-bottom--zero {
+      margin-bottom: 0;
+    }
+
+
+//Set padding to zero
+
+.padding--zero {
+  padding: 0;
+}
+
+  .padding-right-left--zero {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+    .padding-left--zero {
+      padding-left: 0;
+    }
+
+    .padding-right--zero {
+      padding-right: 0;
+    }
+
+  .padding-top-bottom--zero {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+    .padding-top--zero {
+      padding-top: 0;
+    }
+
+    .padding-bottom--zero {
+      padding-bottom: 0;
+    }
+
+//Position classes
+
+@each $position in $position-list {
+  .position--#{$position} {
+    position: $position;
+  }
+}
+
+//Display classes
+
+@each $display in $display-list {
+  .display--#{$display} {
+    display: $display;
+  }
+}
+
+//Visibility classes
+
+.visibility--hidden {
+  visibility: hidden;
+}
+
+.visibility--visible {
+  visibility: visible;
+}
+
+//Overflow classes
+
+.overflow--auto {
+  overflow: auto;
+}
+
+.overflow--hidden {
+  overflow: hidden;
+}
+
+  .overflow-x--hidden {
+    overflow-x: hidden;
+  }
+
+  .overflow-y--hidden {
+    overflow-y: hidden;
+  }

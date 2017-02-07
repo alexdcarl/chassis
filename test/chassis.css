@@ -1,0 +1,470 @@
+/*******VARIABLES FILE*******/
+/******TYPOGRAPHY******/
+/******BREAKPOINTS******/
+/******GRID******/
+/****END OF VARIABLES****/
+*, *:before, *:after {
+  box-sizing: border-box; }
+
+*:before, *:after {
+  clear: both; }
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline; }
+
+html {
+  font-size: 0.73206vw; }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/*****MIXINS TO MAKE LIFE EASIER*****/
+/**
+ * Create vendor-prefixed CSS in one go, e.g.
+ *
+   `@include vendor(border-radius, 4px);`
+ *
+ */
+/**
+ * Dump background-image styles
+ */
+/**
+ * Used for styling input placeholders
+ */
+/**
+ * Used to generate font-size with line height.
+ * @param  {decimal} $size
+ */
+/**
+ * Used to generate a responsive container of a fixed aspect ratio.
+ * @param  {integer} $width  
+ * @param  {integer} $height
+ *
+ * `@include aspect-ratio(16:9);`
+ * 
+ */
+/****END OF MIXINS SECTION****/
+/*******GRID*******/
+/****OPTIONS TO CREATE LISTS****/
+.container {
+  margin: 0 auto;
+  min-height: 100vh;
+  position: relative;
+  width: 100%; }
+
+.flex-box {
+  display: flex; }
+
+.flex-direction-row {
+  flex-direction: row; }
+
+.flex-direction-row-reverse {
+  flex-direction: row-reverse; }
+
+.flex-direction-column {
+  flex-direction: column; }
+
+.flex-direction-column-reverse {
+  flex-direction: column-reverse; }
+
+.horizontal-align-flex-start {
+  justify-content: flex-start; }
+
+.horizontal-align-flex-end {
+  justify-content: flex-end; }
+
+.horizontal-align-center {
+  justify-content: center; }
+
+.horizontal-align-space-between {
+  justify-content: space-between; }
+
+.horizontal-align-space-around {
+  justify-content: space-around; }
+
+.vertical-align-flex-start {
+  align-items: flex-start; }
+
+.vertical-align-flex-end {
+  align-items: flex-end; }
+
+.vertical-align-center {
+  align-items: center; }
+
+.vertical-align-baseline {
+  align-items: baseline; }
+
+.vertical-align-stretch {
+  align-items: stretch; }
+
+.flex-single {
+  flex-wrap: nowrap; }
+
+.flex-multi {
+  flex-wrap: wrap; }
+
+[class*='col-'] {
+  padding: 0px 1.5rem;
+  width: 100%; }
+  [class*='col-']:first-child {
+    padding-left: 2rem; }
+  [class*='col-']:last-child {
+    padding-right: 2rem; }
+
+@media only screen and (min-width: 768px) {
+  .col-sm-1 {
+    width: 8.33333%; }
+
+  .col-sm-2 {
+    width: 16.66667%; }
+
+  .col-sm-3 {
+    width: 25%; }
+
+  .col-sm-4 {
+    width: 33.33333%; }
+
+  .col-sm-5 {
+    width: 41.66667%; }
+
+  .col-sm-6 {
+    width: 50%; }
+
+  .col-sm-7 {
+    width: 58.33333%; }
+
+  .col-sm-8 {
+    width: 66.66667%; }
+
+  .col-sm-9 {
+    width: 75%; }
+
+  .col-sm-10 {
+    width: 83.33333%; }
+
+  .col-sm-11 {
+    width: 91.66667%; }
+
+  .col-sm-12 {
+    width: 100%; } }
+@media only screen and (min-width: 992px) {
+  .col-md-1 {
+    width: 8.33333%; }
+
+  .col-md-2 {
+    width: 16.66667%; }
+
+  .col-md-3 {
+    width: 25%; }
+
+  .col-md-4 {
+    width: 33.33333%; }
+
+  .col-md-5 {
+    width: 41.66667%; }
+
+  .col-md-6 {
+    width: 50%; }
+
+  .col-md-7 {
+    width: 58.33333%; }
+
+  .col-md-8 {
+    width: 66.66667%; }
+
+  .col-md-9 {
+    width: 75%; }
+
+  .col-md-10 {
+    width: 83.33333%; }
+
+  .col-md-11 {
+    width: 91.66667%; }
+
+  .col-md-12 {
+    width: 100%; } }
+@media only screen and (min-width: 1200px) {
+  .col-lg-1 {
+    width: 8.33333%; }
+
+  .col-lg-2 {
+    width: 16.66667%; }
+
+  .col-lg-3 {
+    width: 25%; }
+
+  .col-lg-4 {
+    width: 33.33333%; }
+
+  .col-lg-5 {
+    width: 41.66667%; }
+
+  .col-lg-6 {
+    width: 50%; }
+
+  .col-lg-7 {
+    width: 58.33333%; }
+
+  .col-lg-8 {
+    width: 66.66667%; }
+
+  .col-lg-9 {
+    width: 75%; }
+
+  .col-lg-10 {
+    width: 83.33333%; }
+
+  .col-lg-11 {
+    width: 91.66667%; }
+
+  .col-lg-12 {
+    width: 100%; } }
+@media only screen and (min-width: 1500px) {
+  .col-xl-1 {
+    width: 8.33333%; }
+
+  .col-xl-2 {
+    width: 16.66667%; }
+
+  .col-xl-3 {
+    width: 25%; }
+
+  .col-xl-4 {
+    width: 33.33333%; }
+
+  .col-xl-5 {
+    width: 41.66667%; }
+
+  .col-xl-6 {
+    width: 50%; }
+
+  .col-xl-7 {
+    width: 58.33333%; }
+
+  .col-xl-8 {
+    width: 66.66667%; }
+
+  .col-xl-9 {
+    width: 75%; }
+
+  .col-xl-10 {
+    width: 83.33333%; }
+
+  .col-xl-11 {
+    width: 91.66667%; }
+
+  .col-xl-12 {
+    width: 100%; } }
+/*******TYPOGRAPHY*******/
+* {
+  font-size: 16px;
+  font-size: 1.1713vw;
+  font-size: 1.6rem;
+  line-height: 22.4px;
+  line-height: 1.63982vw;
+  line-height: 2.24rem;
+  font-family: "Arial, Helvetica, sans-serif";
+  font-weight: 300; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Arial, Helvetica, sans-serif";
+  font-style: normal;
+  font-weight: 500; }
+
+h1 {
+  font-size: 48px;
+  font-size: 3.51391vw;
+  font-size: 4.8rem;
+  line-height: 60px;
+  line-height: 4.39239vw;
+  line-height: 6rem; }
+
+h2 {
+  font-size: 36px;
+  font-size: 2.63543vw;
+  font-size: 3.6rem;
+  line-height: 45px;
+  line-height: 3.29429vw;
+  line-height: 4.5rem; }
+
+h3 {
+  font-size: 28px;
+  font-size: 2.04978vw;
+  font-size: 2.8rem;
+  line-height: 35px;
+  line-height: 2.56223vw;
+  line-height: 3.5rem; }
+
+h4 {
+  font-size: 18px;
+  font-size: 1.31772vw;
+  font-size: 1.8rem;
+  line-height: 22.5px;
+  line-height: 1.64714vw;
+  line-height: 2.25rem; }
+
+blockquote {
+  font-size: 24px;
+  font-size: 1.75695vw;
+  font-size: 2.4rem;
+  line-height: 36px;
+  line-height: 2.63543vw;
+  line-height: 3.6rem; }
+
+p {
+  font-size: 16px;
+  font-size: 1.1713vw;
+  font-size: 1.6rem;
+  line-height: 22.4px;
+  line-height: 1.63982vw;
+  line-height: 2.24rem; }
+
+/*******POSITIONING*******/
+/**
+ * Helper classes to position elements
+ */
+.element--full-screen {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px; }
+
+.element--full-width {
+  position: absolute;
+  left: 0px;
+  right: 0px; }
+
+.element--full-height {
+  top: 0px;
+  bottom: 0px; }
+
+.on-top--two {
+  z-index: 2; }
+
+.on-top--three {
+  z-index: 3; }
+
+.margin--zero {
+  margin: 0; }
+
+.margin-right-left--zero {
+  margin-right: 0;
+  margin-left: 0; }
+
+.margin-left--zero {
+  margin-left: 0; }
+
+.margin-right--zero {
+  margin-right: 0; }
+
+.margin-top-bottom--zero {
+  margin-top: 0;
+  margin-bottom: 0; }
+
+.margin-top--zero {
+  margin-top: 0; }
+
+.margin-bottom--zero {
+  margin-bottom: 0; }
+
+.padding--zero {
+  padding: 0; }
+
+.padding-right-left--zero {
+  padding-right: 0;
+  padding-left: 0; }
+
+.padding-left--zero {
+  padding-left: 0; }
+
+.padding-right--zero {
+  padding-right: 0; }
+
+.padding-top-bottom--zero {
+  padding-top: 0;
+  padding-bottom: 0; }
+
+.padding-top--zero {
+  padding-top: 0; }
+
+.padding-bottom--zero {
+  padding-bottom: 0; }
+
+.position--absolute {
+  position: absolute; }
+
+.position--relative {
+  position: relative; }
+
+.position--fixed {
+  position: fixed; }
+
+.display--block {
+  display: block; }
+
+.display--inline-block {
+  display: inline-block; }
+
+.display--inline {
+  display: inline; }
+
+.display--flex {
+  display: flex; }
+
+.display--none {
+  display: none; }
+
+.visibility--hidden {
+  visibility: hidden; }
+
+.visibility--visible {
+  visibility: visible; }
+
+.overflow--auto {
+  overflow: auto; }
+
+.overflow--hidden {
+  overflow: hidden; }
+
+.overflow-x--hidden {
+  overflow-x: hidden; }
+
+.overflow-y--hidden {
+  overflow-y: hidden; }
+
+/*# sourceMappingURL=chassis.css.map */

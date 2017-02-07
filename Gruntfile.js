@@ -4,7 +4,8 @@ module.exports = function(grunt){
 
 		chassis: {
 			src: '.',
-			dist: 'dist'
+			dist: 'dist',
+			test: 'test'
 		},
 		clean: {
 			dist: {
@@ -15,6 +16,14 @@ module.exports = function(grunt){
 						'!<%= chassis.dist %>/.git*'
 					]
 				}]
+			}
+		},
+		copy : {
+			css: {
+				expand: true,
+				cwd: '<%= chassis.dist %>',
+				src: 'chassis.css',
+				dest: '<%= chassis.test %>'
 			}
 		},
 		sass: {
@@ -31,12 +40,13 @@ module.exports = function(grunt){
 		watch: {
 			scss: {
 				files: ['**/*.scss','!test/**/*.scss'],
-				tasks : ['sass'],
+				tasks : ['default'],
 			}
 		}
 	});
 	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-contrib-clean');
+	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-contrib-watch');
-	grunt.registerTask('default',[ "clean:dist", "sass", "watch" ]);
+	grunt.registerTask('default',[ "clean:dist", "sass", "copy", "watch" ]);
 }

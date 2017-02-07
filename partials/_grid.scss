@@ -6,7 +6,6 @@ $justify-content-list: flex-start flex-end center space-between space-around;
 $vertical-align-list: flex-start flex-end center baseline stretch;
 
 .container {
-  @include font-size(1.4);
 	margin: 0 auto;
   min-height: 100vh; 
   position: relative;
@@ -72,9 +71,9 @@ $vertical-align-list: flex-start flex-end center baseline stretch;
 	}
 }
 
-@media #{$bp-l} {
+@media #{$bp-lg} {
   @for $i from 1 through $grid-columns {
-    .col-l-#{$i} {
+    .col-lg-#{$i} {
         width: 100% / $grid-columns * $i;
     }
   }

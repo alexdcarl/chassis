@@ -39,11 +39,44 @@
  * Used to generate font-size with line height.
  * @param  {decimal} $size
  */
-@mixin font-size($size) {
+@mixin font-size($size, $ratio) {
+  font-size: $size * 10px;
   font-size: $size * $root-font-size;
   font-size: $size * 1rem;
-  line-height: $size * $line-height-font-size-ratio * $root-font-size;
-  line-height: $size * $line-height-font-size-ratio * 1rem;
+  line-height: $size * $ratio * 10px;
+  line-height: $size * $ratio * $root-font-size;
+  line-height: $size * $ratio * 1rem;
+}
+
+
+/**
+ * Used to generate a responsive container of a fixed aspect ratio.
+ * @param  {integer} $width  
+ * @param  {integer} $height
+ *
+ * `@include aspect-ratio(16:9);`
+ * 
+ */
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+  }
+  > .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  > .content img {
+    height: 100%;
+    width: 100%;
+  }
 }
 
 /****END OF MIXINS SECTION****/
